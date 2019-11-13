@@ -18,7 +18,7 @@ public class CollectionDao implements PersonDao{
     }
 
     @Override
-    public List<Person> getAll() {
+    public List<Person> selectAllPeople() {
         return personDb;
     }
 }

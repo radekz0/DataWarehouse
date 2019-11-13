@@ -3,6 +3,7 @@ package com.spring.DataWarehouse.api;
 import com.spring.DataWarehouse.model.Person;
 import com.spring.DataWarehouse.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,13 +21,11 @@ public class PersonController {
 
     @PostMapping
     public ResponseEntity addPerson(@RequestBody Person person){
-
-        personService.addPerson(person);
+        return new ResponseEntity<>(personService.addPerson(person), HttpStatus.OK);
     }
 
     @GetMapping
     public ResponseEntity getAll(){
-        System.out.println("chujjjjji");
-        return personService.getAllPeople();
+        return new ResponseEntity<>(personService.getAllPeople(), HttpStatus.OK);
     }
 }
