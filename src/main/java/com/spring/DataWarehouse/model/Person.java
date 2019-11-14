@@ -1,21 +1,21 @@
 package com.spring.DataWarehouse.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Long id;
+
+    @Column(name="name")
     private String name;
 
     public Person(){}
 
-    public Person( Long id, String name) {
+    public Person(Long id, String name) {
         this.id = id;
         this.name = name;
     }
