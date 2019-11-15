@@ -13,11 +13,23 @@ public class Person {
     @Column(name="name")
     private String name;
 
+    @Column(name="average_time")
+    private String averageTime;
+
     public Person(){}
 
-    public Person(Long id, String name) {
+    public Person(Long id, String name, String averageTime) {
         this.id = id;
         this.name = name;
+        this.averageTime = averageTime;
+    }
+
+    public String getAverageTime() {
+        return averageTime;
+    }
+
+    public void setAverageTime(String averageTime) {
+        this.averageTime = averageTime;
     }
 
     public void setId(Long id) {

@@ -10,7 +10,7 @@ spring:
   # JPA properties
   jpa:
     hibernate:
-      ddl-auto: update  #When we use Liquidbase/Flyway it defaults to create-drop, in all other cases it defaults to none.
+      ddl-auto: create-drop  #When we use Liquidbase/Flyway it defaults to create-drop, in all other cases it defaults to none.
     show-sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
