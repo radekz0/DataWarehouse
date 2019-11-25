@@ -8,13 +8,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("api/person")
-@RestController
-public class PersonController {
+@org.springframework.web.bind.annotation.RestController
+public class ApiController {
 
     private final PersonService personService;
 
     @Autowired
-    public PersonController(PersonService personService) {
+    public ApiController(PersonService personService) {
         this.personService = personService;
     }
 
