@@ -38,6 +38,4 @@ public class PersonController {
         personService.loadTest();
         return "redirect:/";
     }
-
-
 }
