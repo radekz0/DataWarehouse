@@ -4,7 +4,6 @@ import com.spring.DataWarehouse.model.Person;
 import com.spring.DataWarehouse.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,5 +29,19 @@ public class PersonServiceImpl implements PersonService{
     public Person insertPerson(Person person) {
         personRepository.save(person);
         return person;
+    }
+    @Override
+    public void extractTest(){
+        System.out.println("########Extract test########Debugging level 9000########");
+    }
+
+    @Override
+    public void transformTest() {
+        System.out.println("########Transform test########Debugging level 9000########");
+    }
+
+    @Override
+    public void loadTest() {
+        System.out.println("########Load test########Debugging level 9000########");
     }
 }

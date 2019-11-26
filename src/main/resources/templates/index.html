@@ -22,14 +22,16 @@ body {
 <div class = "container">
     <form>
         <div class="form-row" align="center">
+            <form th:action="@{/extract}">
+                <div class="form-group col-md-4">
+                    <a href="/extract" class="btn btn-primary btn-lg" role="button">E</a>
+                </div>
+            </form>
             <div class="form-group col-md-4">
-                <button type="button" class="btn btn-primary btn-lg">E</button>
+                <a href="/transform" class="btn btn-primary btn-lg" role="button">T</a>
             </div>
             <div class="form-group col-md-4">
-                <button type="button" class="btn btn-primary btn-lg">T</button>
-            </div>
-            <div class="form-group col-md-4">
-                <button type="button" class="btn btn-primary btn-lg">L</button>
+                <a href="/load" class="btn btn-primary btn-lg" role="button">L</a>
             </div>
         </div>
     </form>
