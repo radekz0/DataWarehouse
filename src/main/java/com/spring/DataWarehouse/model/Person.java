@@ -13,34 +13,51 @@ public class Person {
     @Column(name="name")
     private String name;
 
-    @Column(name="average_time")
-    private String averageTime;
+    @Column(name="race")
+    private String race;
+
+    @Column(name="time")
+    private String time;
 
     public Person(){}
 
-    public Person(Long id, String name, String averageTime) {
+    public Person(Long id, String firstName, String race, String time) {
         this.id = id;
-        this.name = name;
-        this.averageTime = averageTime;
-    }
-
-    public String getAverageTime() {
-        return averageTime;
-    }
-
-    public void setAverageTime(String averageTime) {
-        this.averageTime = averageTime;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+        this.name = firstName;
+        this.race = race;
+        this.time = time;
     }
 
     public Long getId() {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public String getRace() {
+        return race;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }
